@@ -1,0 +1,633 @@
+:root {
+  --primary: rgb(236, 190, 130);
+  --secondary: rgb(29, 18, 15);
+  --third: rgb(217, 155, 112);
+  --fourth: rgb(244, 200, 135);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 3000px;
+}
+
+/* navbar start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.navbar-logo {
+  color: var(--secondary);
+  font-size: 2rem;
+}
+
+.navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav ul li {
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.navbar .navbar-nav ul li a {
+  color: var(--secondary);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.navbar-nav ul li a:hover {
+  color: var(--third);
+}
+
+.navbar-nav ul li a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--third);
+  transform: scaleX(0);
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+  transition: 0.2s linear;
+}
+
+.navbar-extra a {
+  font-size: 1rem;
+  color: var(--secondary);
+  border: 2px solid var(--third);
+  display: block;
+  padding: 1rem 3rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--fourth);
+}
+
+.navbar-extra a:hover {
+  background-color: var(--third);
+  color: #fff;
+}
+/* navbar end */
+
+/* hero section start*/
+.hero {
+  display: flex;
+  background-color: var(--primary);
+  min-height: 100vh;
+  padding-top: 6.5rem;
+}
+
+.hero .content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.hero .content h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.hero .content .cta a {
+  color: #fff;
+  font-size: 1.5rem;
+  border: 3px solid #fff;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+}
+
+/* .hero .content .cta a:hover {
+  background-color: var(--secondary);
+} */
+
+.hero .product {
+  flex: 3;
+  background-image: url(asset/hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* hero section end */
+
+/* product start */
+.product {
+  display: block;
+  background-color: #fff;
+  padding: 5rem;
+  padding-top: 6.5rem;
+}
+
+.product .shop-title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.product .shop-title h1 {
+  font-size: 1.1rem;
+  padding-left: 0.8rem;
+}
+
+.product .product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product .product-list .card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 23%;
+  border: 2px solid var(--primary);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1%;
+  margin-top: 1.5rem;
+}
+
+.product .product-list .card img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.product .product-list .card h1 {
+  margin-bottom: 0.3rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.product .product-list .card h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.product .product-list .card .weight {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.product .product-list .card .weight a {
+  margin: 0 0.2rem 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid black;
+  font-size: 0.7rem;
+  color: var(--secondary);
+  border-radius: 5px;
+}
+
+.product .product-list .card .weight a:hover {
+  background-color: var(--fourth);
+  border: 1px solid var(--fourth);
+  color: #fff;
+}
+
+.product .product-list .card .price {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.product .product-list .card .price a {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  background-color: var(--fourth);
+  padding: 0.5rem 4rem;
+  border-radius: 1rem;
+  color: var(--secondary);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.product .product-list .card .price a:hover {
+  background-color: var(--third);
+  color: #fff;
+}
+/* product end */
+
+/* subscribe start */
+.subscribe {
+  display: block;
+  padding: 5rem;
+  padding-top: 6.5rem;
+}
+.subscribe .title h1 {
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe .guarantee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe .guarantee .item {
+  margin: 1%;
+  width: 15%;
+  text-align: center;
+}
+
+.subscribe .guarantee .item h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.subscribe .guarantee .item h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.subscribe .review .review-person {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe .review h1 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.subscribe .review .person {
+  width: 25%;
+  margin: 1%;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.subscribe .review .person p {
+  margin-top: 5rem;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+.subscribe .review .person h1 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.subscribe .review .person h2 {
+  font-size: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.subscribe .wild {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.subscribe .some-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe .some-review a {
+  border: 1px solid var(--primary);
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  color: var(--secondary);
+  font-weight: 500;
+  color: var(--secondary);
+  background-color: var(--third);
+}
+
+.subscribe .some-review a:hover {
+  border: 1px solid var(--fourth);
+  background-color: var(--fourth);
+  color: #fff;
+}
+/* subscribe end */
+/* learn start */
+.learn {
+  display: block;
+  padding: 5rem;
+  padding-top: 6.5rem;
+}
+
+.learn .title h1 {
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.learn .benefit {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid var(--fourth);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.learn .benefit .img {
+  flex: 2;
+  background-image: url(asset/hero.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+
+.learn .benefit .content {
+  flex: 3;
+  text-align: left;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.learn .benefit .content ul {
+  list-style: inside;
+  margin-bottom: 1.4rem;
+}
+
+.learn .benefit .content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.learn .benefit .content h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.learn .benefit .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.learn .benefit .content a {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 2rem;
+  border-radius: 1rem;
+  color: var(--secondary);
+  background-color: var(--fourth);
+}
+
+.learn .benefit .content a:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+/* learn end */
+
+/* reference start */
+.reference {
+  display: block;
+  padding: 5rem;
+  padding-top: 6.5rem;
+}
+
+.reference .title h1 {
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.reference .card {
+  display: flex;
+  justify-content: center;
+}
+
+.reference .card .item {
+  padding-top: 7rem;
+  width: 17%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 1%;
+}
+
+.reference .card .item h2 {
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.reference .card .item h3 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0 1rem 0.5rem 0.5rem;
+}
+
+.reference .article .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reference .article .title h1 {
+  font-size: 1rem;
+}
+
+.reference .article .blog {
+  display: flex;
+}
+
+.reference .article .blog .bag-1 {
+  flex: 3;
+}
+
+.reference .article .blog .bag-2 {
+  flex: 2;
+}
+
+.reference .article .blog .bag-1 .blog-1 {
+  border: 2px solid var(--fourth);
+  padding: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.reference .article .blog .bag-1 .blog-1 .img {
+  flex: 1;
+  background-image: url(asset/product-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reference .article .blog .bag-1 .blog-1 .content {
+  flex: 3;
+}
+
+.reference .article .blog .bag-1 .blog-1 .content h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  margin-left: 1rem;
+}
+
+.reference .article .blog .bag-1 .blog-1 .content h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.reference .article .blog .bag-1 .blog-1 .content a {
+  display: inline-block;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: var(--fourth);
+  border-radius: 0.5rem;
+  color: var(--secondary);
+}
+
+.reference .article .blog .bag-1 .blog-1 .content a:hover {
+  color: #fff;
+  background-color: var(--primary);
+}
+
+.reference .article .blog .bag-1 .blog-2 {
+  border: 2px solid var(--fourth);
+  padding: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+
+.reference .article .blog .bag-1 .blog-2 .img {
+  flex: 1;
+  background-image: url(asset/product-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reference .article .blog .bag-1 .blog-2 .content {
+  flex: 3;
+}
+
+.reference .article .blog .bag-1 .blog-2 .content h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  margin-left: 1rem;
+}
+
+.reference .article .blog .bag-1 .blog-2 .content h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.reference .article .blog .bag-1 .blog-2 .content a {
+  display: inline-block;
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: var(--fourth);
+  border-radius: 0.5rem;
+  color: var(--secondary);
+}
+
+.reference .article .blog .bag-1 .blog-2 .content a:hover {
+  color: #fff;
+  background-color: var(--primary);
+}
+
+.reference .article .blog .bag-2 {
+  border: 2px solid var(--fourth);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.reference .article .blog .bag-2 .img {
+  flex: 3;
+  padding: 1rem;
+  background-image: url(asset/product-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.reference .article .blog .bag-2 .content {
+  flex: 2;
+}
+
+.reference .article .blog .bag-2 .content h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  /* margin-left: 1rem; */
+}
+
+.reference .article .blog .bag-2 .content h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  /* margin-left: 1rem; */
+}
+
+.reference .article .blog .bag-2 .content a {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--fourth);
+  border-radius: 0.5rem;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.reference .article .blog .bag-2 .content a:hover {
+  color: #fff;
+  background-color: var(--primary);
+}
+/* reference end */
